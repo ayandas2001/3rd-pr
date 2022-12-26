@@ -16,7 +16,7 @@ function AddDocument() {
 			body:addData,
             method:"POST",
             headers:{
-                        'Authorization':'Basic dGVzdEBsaWZlcmF5LmNvbTpMZWFybg==',
+            'Authorization':'Basic dGVzdEBsaWZlcmF5LmNvbTpMZWFybg==',
 						'Accept':'*/*'
             }
             }).then((response)=>{
@@ -41,19 +41,22 @@ function AddDocument() {
 	
   return (
     <div>
-        <h1>AddDocument:</h1>
-        <ClayForm.Group>
-				<form id="files" onClick={()=>AddDocuments()}>
-				  <label htmlFor="filess">Enter id to update</label>
-				  <ClayInput
-					type="file"
-					 multiple
-					id="filess"
-					/>
-					<button type="submit">Submit</button>
-				</form>
-			</ClayForm.Group>
-            
+      <h1>AddDocument:</h1>
+      <form id="files" onClick={() => AddDocuments()}>
+      <ClayForm.Group>
+          <label htmlFor="filess">Enter id to update</label>
+          <ClayInput
+            type="file"
+            multiple
+            id="filess"
+
+
+          />
+      </ClayForm.Group>
+      <button className="btn btn-primary" type="submit">Upload files</button>
+        
+      </form>
+
     </div>
   )
 }
